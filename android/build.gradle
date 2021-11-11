@@ -45,5 +45,5 @@ repositories {
 
 dependencies {
     implementation 'com.facebook.react:react-native:+'
-    implementation 'me.leolin:ShortcutBadger:1.1.23@aar'
+    implementation 'me.leolin:ShortcutBadger:1.1.22@aar'
 }
