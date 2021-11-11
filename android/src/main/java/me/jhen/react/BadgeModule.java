@@ -36,6 +36,6 @@ public class BadgeModule extends ReactContextBaseJavaModule {
     ShortcutBadger.removeCount(getReactApplicationContext());
     NotificationManager mNotificationManager = (NotificationManager) getReactApplicationContext()
         .getSystemService(Context.NOTIFICATION_SERVICE);
-    mNotificationManager.clearAll();
+    mNotificationManager.cancelAll();
   }
 }
