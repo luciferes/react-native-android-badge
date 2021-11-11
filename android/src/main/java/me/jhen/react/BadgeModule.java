@@ -1,5 +1,6 @@
 package me.jhen.react;
 
+import android.app.NotificationManager;
 import android.content.Context;
 
 import com.facebook.react.bridge.NativeModule;
@@ -28,5 +29,13 @@ public class BadgeModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void setBadge(int number) {
     ShortcutBadger.applyCount(getReactApplicationContext(), number);
+  }
+
+  @ReactMethod
+  public void clearNotification() {
+    ShortcutBadger.removeCount(getReactApplicationContext());
+    NotificationManager mNotificationManager = (NotificationManager) getReactApplicationContext()
+        .getSystemService(Context.NOTIFICATION_SERVICE);
+    mNotificationManager.clearAll();
   }
 }
